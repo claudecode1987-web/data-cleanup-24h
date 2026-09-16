@@ -1,0 +1,50 @@
+name: Request a fixed quote
+description: Describe a small Excel, CSV, PDF, or reporting task. Do not include sensitive data.
+title: "Quote: "
+labels: ["quote request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest. Describe the task below without uploading confidential or sensitive information. A representative, invented example is enough for the first review.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is the current problem?
+      description: Describe what you do manually now and what makes it difficult.
+      placeholder: I receive three CSV exports each Friday and manually merge them...
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What should the finished result look like?
+      description: Name the desired file format, columns, calculations, or report.
+      placeholder: One Excel file with standardized dates, duplicates removed, and totals by category.
+    validations:
+      required: true
+  - type: dropdown
+    id: size
+    attributes:
+      label: Approximate size
+      options:
+        - One small file
+        - Several files
+        - Recurring workflow
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline and timezone
+      placeholder: 18 Sep, 5pm UTC
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I will not post passwords, account details, health data, private customer information, or other sensitive data in this public issue.
+          required: true
