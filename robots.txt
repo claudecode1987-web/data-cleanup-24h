@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://claudecode1987-web.github.io/data-cleanup-24h/sitemap.xml
